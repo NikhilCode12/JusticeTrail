@@ -1,0 +1,43 @@
+.game-container {
+  min-height: 100vh;
+}
+
+.game-nav {
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.game-settings {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  position: absolute;
+  top: 1.1em;
+  right: 1.1em;
+}
+
+.game-timer {
+  position: absolute;
+  top: 0;
+  color: #304550;
+  font-size: 2.5em;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20%);
+  cursor: pointer;
+}
+
+
+.game-intro-title {
+  margin: 0;
+}
+
+.soundlogo{
+  width: 24px;
+}
+
+.game-score{
+  font-size: 1.5em;
+}

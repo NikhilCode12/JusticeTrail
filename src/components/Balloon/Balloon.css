@@ -1,0 +1,81 @@
+.balloon {
+  max-width: 120px;
+  transition: transform 0.5s ease-in-out, opacity 0.1s ease-in-out;
+  margin: auto;
+  transform-origin: bottom center;
+  animation: float 3s infinite ease-in-out alternate;
+  animation-delay: 0.1s; 
+}
+
+.balloon--popping {
+  animation: balloon-popping 0.1s ease-in-out alternate;
+  transform-origin: 50% 75%;
+  translate: 0% 100%;
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+      transform: translateY(25px) rotate(2deg);
+  }
+}
+
+@keyframes balloon-popping {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(3);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.balloon-cell {
+  cursor: url(../../assets/shooter.svg) 8 8, pointer;
+  position: relative;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  background: transparent;
+}
+
+.balloon-cell:active {
+  cursor: url(../../assets/shooter.svg) 16 8, pointer;
+}
+
+.answer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pri-color-light);
+  box-shadow: 0.25em 0.25em 0 0 var(--pri-color-dark);
+  border-radius: 1em;
+  transition: rotate 0.25s ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
+  min-width: 20vw;
+  width: auto;
+  min-height: 20vh;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+}
+
+.answer-container:hover{
+    rotate: 2deg;
+}
+
+.balloon-grid-option1,
+.balloon-grid-option2,
+.balloon-grid-option3 {
+  text-align: center;
+  font: 1em "Balsamiq Sans", sans-serif;
+}
+
+.correct {
+  background-color: lightgreen;
+}
