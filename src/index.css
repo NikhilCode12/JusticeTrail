@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --hue: 200;
 
@@ -25,7 +29,7 @@
 
 body {
   font: 1em/1.5 "Balsamiq Sans", sans-serif;
-  background-color: var(--pri-color);
+  background-color: white;
   color: var(--sec-color);
   margin: 0;
 }

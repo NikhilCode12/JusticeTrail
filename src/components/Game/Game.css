@@ -1,3 +1,7 @@
+body{
+  background-color: var(--pri-color);
+}
+
 .game-container {
   min-height: 100vh;
 }
