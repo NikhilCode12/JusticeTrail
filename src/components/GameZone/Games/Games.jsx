@@ -1,12 +1,17 @@
 import React from 'react'
 import Rating from '../Games/Rating'
 import Button from '@mui/material/Button'
+import { motion } from 'framer-motion'
 
 function Games() {
   return (
     <div className='flex justify-center flex-col'>
       <h1 className='text-2xl mb-6 text-center'>Game Zone</h1>
-      <div className="games-container w-full h-auto rounded-lg bg-gradient-to-r from-teal-400 to-lime-200 cursor-pointer opacity-[90%] hover:opacity-[100%] transition ease-in">
+      <motion.div 
+      initial={{opacity:0,translateX:-4,translateY:-4}}
+      animate={{opacity:1,translateX:0,translateY:0}}
+      transition={{duration:0.25}}
+      className="games-container w-full h-auto rounded-lg bg-gradient-to-r from-teal-400 to-lime-200 cursor-pointer opacity-[90%] hover:opacity-[100%] transition ease-in">
         <div className="game flex p-4 justify-between">
           <div className="description">
             <h3 className='title text-[1.2em] text-black'>Quiz Game</h3>
@@ -36,7 +41,7 @@ function Games() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }
