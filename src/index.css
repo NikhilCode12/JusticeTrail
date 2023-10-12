@@ -59,3 +59,16 @@ h2,
 h3 {
   line-height: 1.2;
 }
+
+.bot-btn{
+  border: solid 2px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  color: white;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgb(70, 196, 196); 
+  padding-left: 12px;
+}
