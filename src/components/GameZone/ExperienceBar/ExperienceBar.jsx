@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 function ExperienceBar() {
   const [points, setPoints] = useState(0);
@@ -10,27 +11,32 @@ function ExperienceBar() {
         setLevel(level + 1);
         setPoints(0);
       } else {
-        setPoints(points + 10);
+        setPoints(450);
       }
-    }, 1000);
+    }, 100);
 
     return () => {
       clearInterval(interval);
     };
   }, [points, level]);
 
-  const levelNames = ['Rookie', 'Novice', 'Intermediate', 'Advanced', 'Expert'];
+  const levelNames = ['🚀  Rookie', '📚  Novice', '💥  Intermediate', '👩‍⚖️  Advanced', '👑  Expert'];
 
-  const levelName = level < levelNames.length ? levelNames[level] : `Level ${level}`;
+  const levelName = level < levelNames.length ? levelNames[Math.floor(Math.random()*levelNames.length)] : '';
 
   return (
-    <div className="w-full bg-gray-200 rounded-full">
-      <div className="bg-blue-500 text-white py-1 rounded-full" style={{ width: `${(points / 500) * 100}%` }}>
-        <div className="absolute inset-0 flex items-center justify-center text-black">
-          {levelName}
+    <motion.div 
+    initial={{y:-10,opacity: 0}}
+    animate={{y:0,opacity:1}}
+    transition={{duration:0.5}}
+    className="w-full flex transition-all 1s justify-left rounded-full bg-gradient-to-r from-orange-400 to-orange-100 relative cursor-pointer">
+      <div className="bg-gradient-to-r from-red-400 to-orange-400 text-white rounded-full flex justify-between w-full transition-all 1s h-8" style={{ width: `${(points / 1000) * 100}%` }}>
+        <div className="flex justify-between my-auto items-center text-center inset-0 w-full text-slate-800 text-sm">
+          <div className="left ml-2">{levelName}</div>
+          <div className="points mx-full absolute right-2">{points + ' Pts'}</div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

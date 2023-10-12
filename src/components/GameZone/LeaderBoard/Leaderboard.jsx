@@ -12,7 +12,7 @@ const avatarData = [
   },
   {
     username: 'meenakshi18',
-    points: 1000
+    points: 750
   },
   {
     username: 'amanKhan22',
@@ -61,8 +61,8 @@ export default function LeaderBoard() {
           transition={{duration:1}}
           className={`player flex mx-auto px-2 py-1 w-64 my-1 cursor-pointer  
             hover:scale-110 transition-all 1s text-center text-[0.85rem] border-[1px]
-            ${index === 0 ? 'bg-[#FFD700] hover:bg-gradient-to-bl hover:bg from-[white] to-[#FFD700]' : index === 1 ? 'bg-[#C0C0C0] hover:bg-gradient-to-bl hover:bg from-[white] to-[#C0C0C0]' : index === 2 ? 'bg-[#f09943] hover:bg-gradient-to-bl from-[white] to-[#CD7F32]' : 'bg-purple-300'}
-            border-gray-600 rounded-full hover:border-gray-800 hover:bg-gradient-to-bl hover:bg from-purple-300 to-rose-300`
+            ${index === 0 ? 'bg-[#FFD700] hover:bg-gradient-to-bl hover:bg from-[yellow] to-[#FFD700]' : index === 1 ? 'bg-[#C0C0C0] hover:brightness-100 hover:bg-gradient-to-bl hover:bg from-[white] to-[#C0C0C0]' : index === 2 ? 'bg-[#f09943] hover:brightness-125 hover:bg-gradient-to-bl from-[#f09943] to-[#CD7F32]' : 'bg-sky-100 hover:bg-gradient-to-r from-red-200 to-slate-300'}
+            border-gray-600 rounded-full`
           }
             key={player.username}
           >

@@ -17,19 +17,19 @@ function Games() {
 
   return (
     <div className="flex justify-center flex-col">
-      <h1 className="text-2xl mt-2 mb-10 text-center">Game Zone</h1>
+      <h1 className="text-4xl mt-4 mb-8 text-center">Game Zone</h1>
       {gamesData.map((game, index) => (
         <motion.div
           key={index}
           initial={{ opacity: 0}}
           animate={{ opacity: 1}}
           transition={{ duration: 0.5 }}
-          className="games-container w-full h-auto rounded-xl bg-gradient-to-r from-teal-400 to-lime-200 cursor-pointer opacity-[90%] hover:opacity-[100%] transition ease-in mb-6"
+          className="games-container w-full h-auto rounded-xl bg-gradient-to-r from-teal-400 to-lime-200 cursor-pointer opacity-[90%] hover:opacity-[100%] transition ease-in mb-6 drop-shadow-lg"
         >
           <div className="game flex p-4 justify-between">
             <div className="description">
               <h3 className="title text-[1.2em] text-black">{game.title}</h3>
-              <p className="game-info text-[0.85em] text-justify w-[95%] text-slate-600">
+              <p className="game-info text-[0.85em] text-justify w-[95%] text-slate-700">
                 {game.description}
               </p>
             </div>
@@ -48,7 +48,7 @@ function Games() {
                     margin: '5px',
                     fontWeight: 'bold',
                     width: '90%',
-                    backgroundColor: 'indigo',
+                    backgroundColor: ' indigo',
                     letterSpacing: '2px',
                   }}
                 >
