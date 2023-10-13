@@ -1,4 +1,10 @@
-<h1 align="center" id="title">JusticeTrail: Unlocking Rights, One Game at a Time!</h1>
+## JusticeTrail: Where Play Meets Justice, and Learning Becomes an Adventure!
+
+<hr>
+
+<h2>About JusticeTrail </h2>
+<p id="description">JusticeTrail is an innovative project that uses gamified experiences and engaging animations to empower children with a comprehensive understanding of their rights, making learning about justice an enjoyable and interactive journey.</p>
+<hr>
 
 ## Technologies Used
 
@@ -6,9 +12,6 @@
 
 <hr>
 
-<h2>About JusticeTrail </h2>
-<p id="description">JusticeTrail is an innovative project that uses gamified experiences and engaging animations to empower children with a comprehensive understanding of their rights, making learning about justice an enjoyable and interactive journey.</p>
-<hr>
 <h2>🚀 Demo</h2>
 
 Visit the live website here : 
