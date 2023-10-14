@@ -1,7 +1,8 @@
-import React from 'react';
+import React , { useState } from 'react';
 import Rating from '../Games/Rating';
 import Button from '@mui/material/Button';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 function Games() {
   const gamesData = [
@@ -34,26 +35,28 @@ function Games() {
               </p>
             </div>
             <div className="rating text-black flex flex-col justify-between">
-              <div className="raitng">
+              <div className="rating">
                 <Rating />
               </div>
               <div className="start">
-                <Button
-                  variant="contained"
-                  href="/"
-                  style={{
-                    fontFamily: 'inherit',
-                    textAlign: 'center',
-                    display: 'inline-block',
-                    margin: '5px',
-                    fontWeight: 'bold',
-                    width: '90%',
-                    backgroundColor: ' indigo',
-                    letterSpacing: '2px',
-                  }}
-                >
-                  CLICK TO PLAY
-                </Button>
+                <Link to='/play'>
+                  <Button
+                    variant="contained"
+                    href="/"
+                    style={{
+                      fontFamily: 'inherit',
+                      textAlign: 'center',
+                      display: 'inline-block',
+                      margin: '5px',
+                      fontWeight: 'bold',
+                      width: '90%',
+                      backgroundColor: ' indigo',
+                      letterSpacing: '2px',
+                    }}
+                  >
+                    Click Me to Play
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

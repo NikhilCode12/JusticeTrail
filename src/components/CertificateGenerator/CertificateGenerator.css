@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Sniglet&display=swap');
+
+h1,h3{
+    font-family: 'Abril Fatface', serif;
+}
+
+h2,p{
+    font-family: 'Sniglet',serif;
+}
+
+.certificate div{
+    font-family: 'Sniglet',serif;
+}

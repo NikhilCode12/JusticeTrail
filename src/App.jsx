@@ -1,22 +1,22 @@
 import React from "react";
-import Game from "./components/Game/Game";
-import Constants from "./utils/constants";
-import GameZone from './components/GameZone/GameZone';
-import AnimatedBG from './components/GameZone/AnimatedBG/AnimatedBG';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import GameQuiz from './components/GameZone/Games/GameQuiz';
+import GamesScreen from './components/GameZone/GamesScreen/GamesScreen';
+import CertificateGenerator from "./components/CertificateGenerator/CertificateGenerator";
 import './App.css';
 
 const App = () => {
   return (
-    <>
-    <div className="relative w-full h-screen">
-      <div className="absolute top-0 left-0 w-full h-full">
-        <AnimatedBG />
-      </div>
-      <div className="absolute top-0 left-0 w-full h-full">
-        <GameZone />
-      </div>
-    </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path='/play' element={<GameQuiz />} />
+        <Route path="/games" element={<GamesScreen />}/>
+        {/* Home Screen here! */}
+        {/* <Route path='' element={<Home />}/> */}
+        {/* Create routes afer adding component */}
+        <Route path='/certificate' element={<CertificateGenerator />}/>
+      </Routes>
+    </Router>
   );
 };
 
