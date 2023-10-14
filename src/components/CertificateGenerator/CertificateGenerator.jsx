@@ -31,7 +31,7 @@ let daySuffix = (
     );
 
 function CertificateGenerator() {
-    const certificateRef = useRef(null);
+    const certificateRef = useRef();
     function downloadCertificateAsPDF() {
         const certificateRef = document.getElementById('certificate');
         const pdfOptions = {
