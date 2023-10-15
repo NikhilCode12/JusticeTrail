@@ -35,8 +35,8 @@ function CertificateGenerator() {
     function downloadCertificateAsPDF() {
         const certificateRef = document.getElementById('certificate');
         const pdfOptions = {
-          margin: 0,
-          filename: `${username.fName + username.lName}_certificate.pdf`,
+          margin: 10,
+          filename: `certificate.pdf`,
           image: { type: 'jpeg', quality: 0.98 },
           html2canvas: { scale: 2 },
           jsPDF: { unit: 'mm', format: 'a4', orientation: 'landscape' },
@@ -51,9 +51,9 @@ function CertificateGenerator() {
     return (
         <div className='w-full h-screen bg-[rgb(8,51,68)] flex justify-center items-center'>
             <motion.div 
-            initial={{opacity:0}}
-            animate={{opacity:1}}
-            transition={{duration:1}}
+            initial={{opacity:0,scale:0}}
+            animate={{opacity:1,scale:1}}
+            transition={{duration:0.35,ease: "easeIn"}}
             className="certificate flex justify-center items-center flex-col text-center bg-gradient-to-br from-emerald-200 to-emerald-400 w-[70%] h-[85%] rounded-xl drop-shadow-sm hover:drop-shadow-xl cursor-pointer border-8 border-orange-500" ref={certificateRef} contentEditable={false}>
                 <h1 className='text-7xl'>CERTIFICATE</h1>
                 <h2 className='text-4xl mt-1'>OF COMPLETION</h2>

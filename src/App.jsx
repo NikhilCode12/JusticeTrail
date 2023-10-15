@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import GameQuiz from './components/GameZone/Games/GameQuiz';
 import GamesScreen from './components/GameZone/GamesScreen/GamesScreen';
 import CertificateGenerator from "./components/CertificateGenerator/CertificateGenerator";
+import Courses from './components/Courses/Courses';
 import './App.css';
 
 const App = () => {
@@ -11,10 +12,8 @@ const App = () => {
       <Routes>
         <Route path='/play' element={<GameQuiz />} />
         <Route path="/games" element={<GamesScreen />}/>
-        {/* Home Screen here! */}
-        {/* <Route path='' element={<Home />}/> */}
-        {/* Create routes afer adding component */}
-        <Route path='/certificate' element={<CertificateGenerator />}/>
+        <Route path='/courses' element={<Courses />} />
+        <Route path='/certificate' element={<CertificateGenerator />} />
       </Routes>
     </Router>
   );

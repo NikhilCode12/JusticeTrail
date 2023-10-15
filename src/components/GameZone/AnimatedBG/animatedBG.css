@@ -5,16 +5,10 @@
     padding: 0px;
 }
 
-body{
-    font-family: 'Exo', sans-serif;
-}
-
-
 .context {
     width: 100%;
     position: absolute;
     top:50vh;
-    
 }
 
 .context h1{
@@ -46,7 +40,7 @@ body{
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(255, 255, 255, 0.2);
+    /* background: rgba(255, 255, 255, 0.2); */
     animation: animate 25s linear infinite;
     bottom: -150px;
     

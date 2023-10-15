@@ -4,16 +4,16 @@ import Box from '@mui/material/Box';
 import StarIcon from '@mui/icons-material/Star';
 
 const labels = {
-  0.5: 'Useless',
-  1: 'Useless+',
-  1.5: 'Poor',
-  2: 'Poor+',
-  2.5: 'Ok',
-  3: 'Ok+',
+  0.5: 'Worst',
+  1: 'Waste',
+  1.5: 'Bad',
+  2: 'Ok',
+  2.5: 'Fine',
+  3: 'Nice',
   3.5: 'Good',
-  4: 'Good+',
+  4: 'Great',
   4.5: 'Excellent',
-  5: 'Excellent+',
+  5: 'Outstanding',
 };
 
 function getLabelText(value) {
@@ -27,7 +27,7 @@ export default function HoverRating() {
   return (
     <Box
       sx={{
-        width: 200,
+        width: 205,
         display: 'flex',
         alignItems: 'center',
       }}
@@ -43,10 +43,10 @@ export default function HoverRating() {
         onChangeActive={(event, newHover) => {
           setHover(newHover);
         }}
-        emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+        emptyIcon={<StarIcon style={{ opacity: 0.55}} fontSize="inherit" />}
       />
       {value !== null && (
-        <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+        <Box sx={{ ml: 1 }}>{labels[hover !== -1 ? hover : value]}</Box>
       )}
     </Box>
   );

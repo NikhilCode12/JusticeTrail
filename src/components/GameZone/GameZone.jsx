@@ -5,11 +5,12 @@ import Leaderboard from './LeaderBoard/Leaderboard';
 import ExperienceBar from './ExperienceBar/ExperienceBar';
 import Games from './Games/Games';
 
+
 function GameZone() {
   return (
     <>
     <div className='grid grid-cols-4 gap-6 m-4'>
-      <section className='col-span-3 flex justify-center rounded'>
+      <section className='col-span-3 flex justify-center rounded h-26'>
           <VideoGame />
       </section>
       <section className="leaderboard-menu relative">
@@ -20,7 +21,7 @@ function GameZone() {
             <Leaderboard />
         </section>
       </section>
-      <section className='bg-gradient-to-r from-emerald-500 to-teal-800 text-gray-200 col-span-3 flex justify-center p-6 h-auto rounded-xl'>
+      <section className='bg-gradient-to-tr from-emerald-400 to-teal-600 text-gray-200 col-span-3 flex justify-center p-6 h-auto rounded-xl'>
           <Games />
       </section>
     </div>

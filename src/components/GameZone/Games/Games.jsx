@@ -2,6 +2,7 @@ import React , { useState } from 'react';
 import Rating from '../Games/Rating';
 import Button from '@mui/material/Button';
 import { motion } from 'framer-motion';
+import { BiArrowBack } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 
 function Games() {
@@ -24,8 +25,8 @@ function Games() {
           key={index}
           initial={{ opacity: 0}}
           animate={{ opacity: 1}}
-          transition={{ duration: 0.5 }}
-          className="games-container w-full h-auto rounded-xl bg-gradient-to-r from-teal-400 to-lime-200 cursor-pointer opacity-[90%] hover:opacity-[100%] transition ease-in mb-6 drop-shadow-lg"
+          transition={{ duration: 1 ,ease: "easeIn"}}
+          className="games-container drop-shadow-md w-full h-auto rounded-xl bg-gradient-to-br from-teal-300 to-lime-200 cursor-pointer transition ease-in mb-6 hover:drop-shadow-xl"
         >
           <div className="game flex p-4 justify-between">
             <div className="description">
