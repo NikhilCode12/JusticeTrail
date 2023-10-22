@@ -1,0 +1,13 @@
+.bg{
+    background-image: url('../../../assets/hero.jpg');
+    /* background-color: red; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    position: absolute;
+    filter: brightness(20%);
+    height: 90%;
+    width: 100%;
+    z-index: -3;
+  }
