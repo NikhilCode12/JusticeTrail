@@ -1,30 +1,38 @@
 import React from "react";
 import './hero.css'
 import { Link } from "react-scroll";
+import heroImage from '../../../assets/hero.jpeg';
 
 const Hero = () => {
   return (
     <>
-      <div className="featuredstyle flex flex-row-reverse bg-teal-400">
-        <div className=' flex' >
+      <div className="relative flex h-screen">
+        <div className='absolute inset-0 bg-opacity-50 bg-black' style={{ mixBlendMode: 'multiply' }}>
         </div>
-        <div className='max-w-[1520px] mt-[-96] w-full py-10 h-screen mx-auto text-center flex flex-col'>
-          <p className='text-xl text-white font-bold p-2'>
+        <img
+          src={heroImage}
+          alt="Background"
+          className="object-cover w-full h-full"
+        />
+        <div className='max-w-[1520px] mt-[-96] w-full py-16 h-screen mx-auto text-center flex flex-col absolute z-10'>
+          <p className='text-2xl text-white font-bold p-2 my-4 [text-shadow:1px_1px_4px_var(--tw-shadow-color)] shadow-black'>
             Lets Stand for Ourselves with
           </p>
-          <h1 className="md:text-5xl sm:text-4xl text-4xl font-bold md:py-3 text-white">
-            KIDvocate
+          <h1 className="md:text-8xl sm:text-4xl text-4xl my-2 font-bold md:py-3 text-white [text-shadow:3px_2px_2px_var(--tw-shadow-color)] shadow-black">
+          <span className="text-pink-600">
+            KID
+          </span>
+            vocate
           </h1><br/><br/>
           <div className="flex justify-center items-center">
-            <p className="md:text-3xl sm:text-2xl text-xl font-bold pl-4 text-white">
+            <p className="md:text-4xl sm:text-2xl text-xl font-bold pl-4 text-white [text-shadow:2px_2px_4px_var(--tw-shadow-color)] shadow-black">
               Become the informed kid in the society with
             </p><br/>
-            <p className="md:text-3xl sm:text-2xl text-xl font-bold pl-2 text-pink-600">
+            <p className="md:text-3xl sm:text-2xl text-xl font-bold pl-2 text-pink-600 [text-shadow:2px_2px_2px_var(--tw-shadow-color)] shadow-black">
               Everyone
             </p>
           </div>
-          {/* <p className='md:text-2xl sm:text-xl text-xl py-0 font-bold text-white'>Lorem ipsum is placeholder text commonly used in</p> */}
-          <div className="text-center mt-40">
+          <div className="text-center mt-20">
             <Link
               to="ourServices"
               spy={true}
@@ -32,7 +40,7 @@ const Hero = () => {
               offset={-70}
               duration={900}
             >
-              <button className="bg-white w-[200px] rounded-full font-medium py-3 text-black hover:shadow-xl hover:bg-green-600 outline-none focus:outline-none">
+              <button className="bg-white w-[200px] rounded-full font-medium py-3 text-black hover:shadow-xl hover:bg-green-500 outline-none focus:outline-none text-xl transition all 1s ease-in-out">
                 Get Started
               </button>
             </Link>
