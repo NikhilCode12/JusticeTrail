@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 function Games() {
   const gamesData = [
     {
-      title: 'Quiz Game',
+      title: 'Quiz To Trail',
       description: 'Test your knowledge and challenge your wits with our exciting Quiz Game! Dive into a world of questions on a wide range of topics, from history to pop culture. Compete against the clock and see how many questions you can answer correctly. The Quiz Game is the perfect way to have fun while learning new facts and trivia. Are you ready to become a quiz master?.',
     },
     {

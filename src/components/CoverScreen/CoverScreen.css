@@ -1,3 +1,7 @@
+body{
+  background-color: rgb(8 51 68);
+}
+
 .description + .action {
   margin-top: 1em;
 }

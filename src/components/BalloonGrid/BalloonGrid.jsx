@@ -218,15 +218,15 @@ const BalloonGrid = ({ numberOfBalloons}) => {
   return (
     <div className="balloon-grid-wrapper">
       <h1
-      className="balloon-grid-question">{currentQuestion.ques}</h1>
+      className="balloon-grid-question text-white">{currentQuestion.ques}</h1>
       <div className="balloon-grid">
-        <div className="answer-container">
+        <div className="answer-container bg-cyan-200">
           <p className="balloon-grid-option1">{currentQuestion.options[0]}</p>
         </div>
-        <div className="answer-container">
+        <div className="answer-container bg-cyan-200">
           <p className="balloon-grid-option2">{currentQuestion.options[1]}</p>
         </div>
-        <div className="answer-container">
+        <div className="answer-container bg-cyan-200">
           <p className="balloon-grid-option3">{currentQuestion.options[2]}</p>
         </div>  
         {balloons}

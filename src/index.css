@@ -29,7 +29,7 @@
 
 body {
   font: 1em/1.5 "Balsamiq Sans", sans-serif;
-  background-color: white;
+  background-color: rgb(8 51 68);
   color: var(--sec-color);
   margin: 0;
 }

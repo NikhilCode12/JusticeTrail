@@ -5,6 +5,7 @@ import ScoreCard from "../ScoreCard/ScoreCard";
 import { CSSTransition } from "react-transition-group";
 import Constants from "../../utils/constants";
 import Toast from "../Toast/Toast";
+import { stopTimerMusic } from '../../components/audioUtils';
 import Button from "../Button/Button";
 import "./Game.css";
 
@@ -15,12 +16,9 @@ const Game = ({ numberOfBalloons, gameDuration, questions }) => {
   const [timeRemaining, setTimeRemaining] = useState(gameDuration);
   const [gameStopped, setGameStopped] = useState(false);
   const [hit, setHit] = useState(false);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
   const timerRef = useRef(null);
-
-  function pauseSound(){
-    document.getElementById('Audio')
-  }
 
   const handleBalloonClick = (id) => {
     if (questions[currentQuestionIndex].correctBalloonId === id) {
@@ -50,9 +48,9 @@ const Game = ({ numberOfBalloons, gameDuration, questions }) => {
   const stopGame = () => {
     setGameStarted(false);
     setGameStopped(true);
-    buttonsound();
+    // Implement the sound handling logic here
   };
-  
+
   useEffect(() => {
     let delayTimer;
     if (gameStarted && !gameStopped) {
@@ -75,7 +73,7 @@ const Game = ({ numberOfBalloons, gameDuration, questions }) => {
       clearTimeout(delayTimer);
       clearInterval(timerRef.current);
     };
-  }, [gameStarted,gameStopped]);
+  }, [gameStarted, gameStopped]);
 
   return (
     <div className="game-container">
@@ -84,6 +82,7 @@ const Game = ({ numberOfBalloons, gameDuration, questions }) => {
           score={score}
           onStartGame={startGame}
           duration={Constants.gameDuration}
+          stopTimerMusic={stopTimerMusic}
         />
       )}
       <CSSTransition
@@ -96,7 +95,9 @@ const Game = ({ numberOfBalloons, gameDuration, questions }) => {
         {(state) => (
           <div className={`balloons-screen balloons-screen--${state}`}>
             <div className="game-nav">
-              <h1 className="game-timer"><ScoreCard score={score} time={timeRemaining} /></h1>
+              <h1 className="game-timer">
+                <ScoreCard score={score} time={timeRemaining} />
+              </h1>
               <div className="game-settings">
                 <Button type={"alert"} onClick={stopGame}>
                   Exit
