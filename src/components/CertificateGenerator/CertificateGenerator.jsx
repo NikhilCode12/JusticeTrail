@@ -6,6 +6,12 @@ import Button from '@mui/material/Button';
 import { motion } from 'framer-motion';
 import './CertificateGenerator.css'
 import html2pdf from 'html2pdf.js';
+import signature from '../../assets/signature.png';
+import cloud from '../../assets/cloud.png';
+import childrenBalloon from '../../assets/childrenballoon.png';
+import childLaw from '../../assets/childlaw.png';
+import education from '../../assets/education.png';
+
 
 let username = {
     fName : 'Nikhil',
@@ -62,18 +68,17 @@ function CertificateGenerator() {
                 <p className="content-2 text-md text-center">For successfully completing the course on {coursename}</p>
                 <p className='content-2 text-center text-md mt-0'>Given this {day}{daySuffix} of {month + ', ' + year}</p>
                 <div className="signature mt-4">
-                    <img className="w-60 h-14" src="https://imageupload.io/ib/HyV6z4jYaotNrcp_1697228561.png" alt="signature.png"/>
-                    <h3 className='mb-1'>JusticeTrail</h3>
+                    <img className="w-60 h-14" src={signature} alt="signature.png"/>
+                    <h3 className='mb-1'>KIDvocate</h3>
                     <p>Leader | HackTitans</p>
                 </div>
-                <img className='absolute h-[55%] left-0 bottom-0' src="https://imageupload.io/ib/59Wm8BfUFEexfeb_1697231488.png" alt="pngwing.com (1).png"/>
-                {/* <img className='absolute h-8 top-4 right-4' src="https://imageupload.io/ib/Xj09S68XiHHWZH1_1697232805.png" alt="savechild.png"/> */}
-                <img className='absolute h-[33%] bottom-1 right-1 drop-shadow-md' src="https://imageupload.io/ib/ldBBhGe1S6sHvhU_1697233321.png" alt="education.png"/>
-                <img className='absolute w-28 top-10 left-4' src="https://imageupload.io/ib/m7yZf8gtAstsQt3_1697233929.png" alt="cloud.png"/>
-                <img className='absolute w-28 top-36 left-28' src="https://imageupload.io/ib/m7yZf8gtAstsQt3_1697233929.png" alt="cloud.png"/>
-                <img className='absolute w-28 top-10 right-4' src="https://imageupload.io/ib/m7yZf8gtAstsQt3_1697233929.png" alt="cloud.png"/>
-                <img className='absolute w-28 top-36 right-28' src="https://imageupload.io/ib/m7yZf8gtAstsQt3_1697233929.png" alt="cloud.png"/>
-                <img className='absolute h-[30%] left-40 -bottom-6' src="https://imageupload.io/ib/teoijtRe1UZQquE_1697234941.png" alt="childlaw.png"/>
+                <img className='absolute h-[55%] left-0 bottom-0' src={childrenBalloon} alt="childrenballon.png"/>
+                <img className='absolute h-[33%] bottom-1 right-1 drop-shadow-md' src={education} alt="education.png"/>
+                <img className='absolute w-28 top-10 left-4' src={cloud} alt="cloud.png"/>
+                <img className='absolute w-28 top-36 left-28' src={cloud} alt="cloud.png"/>
+                <img className='absolute w-28 top-10 right-4' src={cloud} alt="cloud.png"/>
+                <img className='absolute w-28 top-36 right-28' src={cloud} alt="cloud.png"/>
+                <img className='absolute h-[30%] left-40 -bottom-6' src={childLaw} alt="childlaw.png"/>
             </motion.div>
             <Button
                 variant="contained"P

@@ -90,10 +90,10 @@ function Courses() {
                     </div>
                 )}
                 </div>
-                <ul className='menu flex justify-center ml-[33%] cursor-pointer'>
-                    <li className='mx-6'>Recommended</li>
-                    <li className='mx-6'>Recently Added</li>
-                    <li className='mx-6'>Archived</li>
+                <ul className='menu flex justify-center ml-[31%] cursor-pointer'>
+                    <li className='mx-8 hover:text-pink-800'>Recommended</li>
+                    <li className='mx-8 hover:text-pink-800'>Recently Added</li>
+                    <li className='mx-8 hover:text-pink-800'>Archived</li>
                 </ul>
                 <ul className='filter flex mr-16 -mt-1'>
                     <li className='mx-1'><button className='border-gray-300 border-1 rounded text-sm px-4 py-1 bg-indigo-200 hover:bg-indigo-300'>A-z</button></li>
@@ -158,6 +158,21 @@ function Courses() {
             }}
             >
                 <BiArrowBack />
+        </Button>     
+        <Button
+            variant="contained"
+            href="/certificate"
+            size="small"
+            style={{
+                position: 'absolute',
+                right: '20px',
+                top: '20px',
+                borderRadius: '50px',
+                padding: '10px',
+                fontSize: '0.75em',
+            }}
+            >
+              Certificates
         </Button>     
     </div>
   )
